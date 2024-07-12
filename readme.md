@@ -1,5 +1,5 @@
 # frontend-assessment
-This project utilizes Vue.JS (vue/cli) and SCSS, pleae install the correcspo
+This project utilizes Vue.JS (vue/cli) and SCSS, pleae install the corresponding dependencies. Thank you!
 
 ## Project setup (only if NodeJS isn't installed)
 ```
