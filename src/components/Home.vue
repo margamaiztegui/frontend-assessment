@@ -1,51 +1,53 @@
 <template>
-    <div class="main-container">
-        <PageHeader />
-        <div class="container">
-            <div class="section">
-                <div class="section-image">
-                    <img src="@/assets/photos/content-image.png" alt="Content image">
-                </div>
-                <div class="section-content">
-                    <p class="section-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus ullamcorper leo vitae placerat. Aliquam vestibulum justo nec suscipit faucibus. Ut nec massa quam. Morbi id massa vitae arcu aliquam volutpat. Nam ac varius magna, at condimentum nunc. In vitae diam at erat pulvinar efficitur non at massa. Maecenas blandit.
-                    </p>
-                    <button class="btn-read-more">READ MORE</button>
-                </div>
-            </div>
-            <div class="section">
-                <div class="section-image">
-                    <img src="@/assets/photos/content-image.png" alt="Content image">
-                </div>
-                <div class="section-content">
-                    <p class="section-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc egestas sapien arcu, et scelerisque ipsum faucibus id. Curabitur imperdiet condimentum odio nec mattis. 
-                    </p>
-                    <button class="btn-read-more">READ MORE</button>
-                </div>
-            </div>
-            <div class="section">
-                <div class="section-image">
-                    <img src="@/assets/photos/content-image.png" alt="Content image">
-                </div>
-                <div class="section-content">
-                    <p class="section-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus ullamcorper leo vitae placerat. Aliquam vestibulum justo nec suscipit faucibus. Ut nec massa quam. Morbi id massa vitae arcu aliquam volutpat. Nam ac varius magna, at condimentum nunc. 
-                    </p>
-                    <button class="btn-read-more">READ MORE</button>
-                </div>
-            </div>
-        </div>
+  <div class="main-container">
+    <div class="align-center">
+      <div class="greetings">
+        <p>Welcome! Please click a link to see the exercises</p>
+      </div>
+      <div class="link-container">
+        <router-link to="/first-exercise" class="black-link">First Exercise</router-link>
+        <router-link to="/second-exercise" class="black-link">Second Exercise</router-link>
+      </div>
+    </div>
     </div>
 </template>
 
 <script>
-import PageHeader from '@/components/Header.vue';
 
 export default {
-  name: 'HomePage',
-  components: {
-    PageHeader
-  }
+  name: 'HomePage'
 }
 </script>
+
+<style lang="scss" scoped>
+.main-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+
+  .align-center {
+    width: 100%;
+    max-width: 400px; 
+    padding: 20px; 
+    text-align: center; 
+    border-radius: 8px; 
+
+    p {
+      font-size: 30px;
+    }
+
+    .link-container {
+    display: flex;
+    flex-direction: column;
+
+    .black-link {
+      color: black;
+      font-size: 40px;
+    }
+  }
+  }
+
+  
+}
+</style>
