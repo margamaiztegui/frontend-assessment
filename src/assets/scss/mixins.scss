@@ -1,0 +1,15 @@
+@mixin centerItemAlign {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+@mixin boldText {
+    font-weight: 700;
+}
+
+@mixin textWrap {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}

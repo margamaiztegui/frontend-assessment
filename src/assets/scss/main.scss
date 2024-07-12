@@ -1,0 +1,106 @@
+@import 'mixins';
+
+body {
+    margin: 0px;
+}
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.main-container {
+    .nav {
+        width: 100%;
+        height: 100%;
+        max-width: 1920px;
+        max-height: 650px;
+        position: relative;
+        text-align: center;
+        display: inline-block;
+        
+        .mobile-banner {
+            display: none;
+        }
+
+        .desktop-banner {
+            display: block;
+            width: 100%;
+            height: auto; 
+        }
+        
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+
+            #title-overlay {
+                @include boldText;
+                font-size: 50px;
+                margin-bottom: 10px;
+            }
+
+            #subtitle-overlay {
+                @include boldText;
+                font-size: 30px;
+                margin-top: 0px;
+            }
+        }
+    }
+
+   .container{
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-around;
+        
+        .section {
+            border: 1px solid #000;
+            border-radius:5px;
+            width: 420px;
+
+            .section-image {
+                width: 400px;
+                height: 300px;
+                display: block;
+                margin: 0 auto;
+                margin-top: 10px;
+                
+                img {
+                    border-radius: 5px;
+                }
+            }
+
+            .section-content {
+                margin: 0px;
+                padding: 10px;
+                @include centerItemAlign;
+                p {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    line-height: 1.5;
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-top: 0px;
+                    height: 209px;
+                }
+
+                .btn-read-more {
+                    @include boldText;
+                    font-size: 16px;
+                    background-color: transparent;
+                    padding: 12px;
+                    border-radius: 28px;
+                    margin-top: 20px;
+                }
+            }
+        }
+   }
+}
